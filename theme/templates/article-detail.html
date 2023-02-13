@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}
-    Article
+      SSJMUK Online Journal Publishing Management System
     {% endblock %}</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -55,14 +55,14 @@
           />
         </svg>
         <span class="text-xl text-white font-bold uppercase tracking-wide"
-          >Online Journal Publishing Website</span
+          >SSJMUK Online Journal Publishing Management System</span
         >
       </a>
       <button
         class="text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler"
         data-target="#navigation"
       >
-        <i class="material-icons">menu</i>
+        <i class="material-icons">เมนู</i>
       </button>
       <div
         class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto"
@@ -75,21 +75,21 @@
             href="{% url 'home' %}"
             class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
           >
-            <span>Home</span>
+            <span>กลับหน้าแรก</span>
           </a>
           {% if user.is_authenticated %}
           <a
             href="{% url 'logout' %}"
             class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
           >
-            <span>Logout</span>
+            <span>ออกจากระบบ</span>
           </a>
             {% else %}
           <a
             href="{% url 'login' %}"
             class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
           >
-            <span>LogIn</span>
+            <span>เข้าสู่ระบบ</span>
           </a>
           {% endif %}
 {#          <a#}
@@ -117,21 +117,21 @@
 <div class="container mx-auto my-10 bg-white p-5 shadow-xl rounded-lg overflow-hidden ">
     <div class="text-center">
         <h3 class="mb-2 text-base text-teal-700 text-3xl hover:text-gray-700">{{ article.issue_title }}</h3>
-        <p class="text-left text-teal-700 text-xl"><strong>Abstract</strong></p>
+        <p class="text-left text-teal-700 text-xl"><strong>บทคัดย่อ</strong></p>
         <p class="text-grey-600 text text-left">{{ article.abstract }}</p>
     </div>
 ​   <div class="mt-4 text-teal-500">
-    <a href="{{ article.journal.get_absolute_url }}"><strong>Journal - </strong>{{ article.journal }}</a>
+    <a href="{{ article.journal.get_absolute_url }}"><strong>ชื่อวารสาร - </strong>{{ article.journal }}</a>
     </div>
     <div class="my-4">
-        <a  class="no-underline mr-4 text-teal-500 mb-1  item-center hover:text-blue-400"><strong>Vol.</strong>{{ article.volume }}</a>
-        <a  class="no-underline mr-4 text-teal-500 mb-1  item-center hover:text-blue-400"><strong>Issue.</strong> {{ article.issue }}</a>
+        <a  class="no-underline mr-4 text-teal-500 mb-1  item-center hover:text-blue-400"><strong>เล่มที่.</strong>{{ article.volume }}</a>
+        <a  class="no-underline mr-4 text-teal-500 mb-1  item-center hover:text-blue-400"><strong>ฉบับที่.</strong> {{ article.issue }}</a>
     </div>
-    <a  class="no-underline mr-4  text-teal-500 mb-1  item-center hover:text-blue-400"><strong>Published at</strong> {{ article.published_at }}</a>
+    <a  class="no-underline mr-4  text-teal-500 mb-1  item-center hover:text-blue-400"><strong>ตีพิมพ์เมิ่อ</strong> {{ article.published_at }}</a>
 
     <div class="mt-4">
         {% if keywords.all %}
-            <p class="inline p-2 text-teal-500"><strong>Keywords</strong> - </p>
+            <p class="inline p-2 text-teal-500"><strong>คำสำคัญ</strong> - </p>
         {% endif %}
         {% for key in keywords.all %}
             <a class="inline bg-teal-500 py-1 px-4 mx-1  rounded-full  text-white" href="#">{{ key }}</a>

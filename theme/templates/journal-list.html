@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}
-        Journals
+      SSJMUK Online Journal Publishing Management System
     {% endblock %}</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -65,14 +65,14 @@
           />
         </svg>
         <span class="text-xl text-white font-bold uppercase tracking-wide"
-          >Online Journal Publishing Website</span
+          >SSJMUK Online Journal Publishing Management System</span
         >
       </a>
       <button
         class="text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler"
         data-target="#navigation"
       >
-        <i class="material-icons">menu</i>
+        <i class="material-icons">เมนู</i>
       </button>
       <div
         class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto"
@@ -85,21 +85,21 @@
             href="{% url 'home' %}"
             class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
           >
-            <span>Home</span>
+            <span>กลับหน้าแรก</span>
           </a>
           {% if user.is_authenticated %}
           <a
             href="{% url 'logout' %}"
             class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
           >
-            <span>Logout</span>
+            <span>ออกจากระบบ</span>
           </a>
             {% else %}
           <a
             href="{% url 'login' %}"
             class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
           >
-            <span>LogIn</span>
+            <span>เข้าสู่ระบบ</span>
           </a>
           {% endif %}
 {#          <a#}
@@ -137,7 +137,7 @@
 {#            </div>#}
 {#        </div>#}
 {#    {% endfor %}#}
-<p class="text-2xl text-gray-700 text-center my-10">Journal Catalogue</p>
+<p class="text-2xl text-gray-700 text-center my-10">คลังข้อมูลวารสารงานวิจัย</p>
 
 <div class="container my-12 mx-auto px-4 md:px-12">
     <div class="flex flex-wrap -mx-1 lg:-mx-4">

@@ -45,7 +45,7 @@
             class="md:block text-left md:pb-2 text-gray-700 mr-0 inline-block whitespace-no-wrap text-sm uppercase font-bold p-4 px-0"
             href="{% url 'home' %}"
           >
-            Online Journal Publishing Website
+          SSJMUK Online Journal Publishing Management System
           </a>
           <ul class="md:hidden items-center flex flex-wrap list-none">
             <li class="inline-block relative">
@@ -127,7 +127,7 @@
                   class="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
                   href="{% url 'home' %}"
                   ><i class="fas fa-newspaper text-gray-500 mr-2 text-sm"></i>
-                  Home</a
+                  กลับหน้าแรก</a
                 >
               </li>
               <li class="items-center">
@@ -135,7 +135,7 @@
                   class="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
                   href="journal"
                   ><i class="fas fa-user-circle text-gray-500 mr-2 text-sm"></i>
-                  Journals</a
+                  วารสาร</a
                 >
               </li>
               <li class="items-center">
@@ -143,7 +143,7 @@
                   class="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
                   href="{% url 'article-list' %}"
                   ><i class="fas fa-user-circle text-gray-500 mr-2 text-sm"></i>
-                  Article List
+                  รายการบทความวิจัยที่พิจารณา
                   </a
                 >  
               </li>
@@ -152,7 +152,7 @@
                   class="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
                   href="{% url 'logout' %}"
                   ><i class="fas fa-fingerprint text-gray-500 mr-2 text-sm"></i>
-                  Logout</a
+                  ออกจากระบบ</a
                 >
               </li>
               <li class="items-center">
@@ -189,8 +189,8 @@
           >
             <a
               class="text-teal-700 text-2xl uppercase hidden lg:inline-block font-semibold"
-              href="./index.html"
-              >EDITOR Dashboard</a
+              href="#"
+              >Dashboard บรรณาธิการ</a
             >
             <form
               class="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3"
@@ -222,7 +222,7 @@
                       <div class="flex flex-wrap">
                         <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
                           <h5 class="text-gray-500 uppercase font-bold text-xs">
-                            Articles in Peer Review
+                            บทความที่กำลังตรรวจสอบโดยผู้เชี่ยวชาญ
                           </h5>
                           <span class="font-semibold text-xl text-gray-800">
                             {{ articles_in_queue }}
@@ -251,7 +251,7 @@
                       <div class="flex flex-wrap">
                         <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
                           <h5 class="text-gray-500 uppercase font-bold text-xs">
-                            Articles Accepted
+                            บทความที่ได้รับการอนุมัติ
                           </h5>
                           <span class="font-semibold text-xl text-gray-800">
                             {{ articles_accepted }}
@@ -280,7 +280,7 @@
                       <div class="flex flex-wrap">
                         <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
                           <h5 class="text-gray-500 uppercase font-bold text-xs">
-                            Articles Published
+                            บทความที่ได้รับการเผยแพร่
                           </h5>
                           <span class="font-semibold text-xl text-gray-800">
                             {{ articles_published }}
@@ -309,7 +309,7 @@
                       <div class="flex flex-wrap">
                         <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
                           <h5 class="text-gray-500 uppercase font-bold text-xs">
-                            Articles Rejected
+                            บทความที่ถูกปฏิเสธ
                           </h5>
                           <span class="font-semibold text-xl text-gray-800">
                             {{ articles_rejected }}
@@ -348,10 +348,10 @@
                       <h6
                         class="uppercase text-gray-600 mb-1 text-xs font-semibold"
                       >
-                        Overview
+                        มุมมองภาพรวม
                       </h6>
                       <h2 class="text-black text-xl font-semibold">
-                        Articles
+                        บทความ
                       </h2>
                     </div>
                   </div>
@@ -377,7 +377,7 @@
                       <h6
                         class="uppercase text-gray-500 mb-1 text-xs font-semibold"
                       >
-                        Recent Notifications
+                        รายการแจ้งเตือนล่าสุด
                       </h6>
                       <h2 class="text-gray-800 text-xl font-semibold">
                         {% comment %} Total orders {% endcomment %}

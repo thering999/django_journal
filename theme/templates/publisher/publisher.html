@@ -41,7 +41,7 @@
             class="md:block text-left text-xl md:pb-2 text-gray-700 mr-0 inline-block whitespace-no-wrap text-sm uppercase font-bold p-4 px-0"
             href="{% url 'home' %}"
           >
-            Online Journal Publishing Website
+          SSJMUK Online Journal Publishing Management System
           </a>
           <ul class="md:hidden items-center flex flex-wrap list-none">
             <li class="inline-block relative">
@@ -114,7 +114,7 @@
                   class="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
                   href="{% url 'home' %}"
                   ><i class="fas fa-newspaper text-gray-500 mr-2 text-sm"></i>
-                  Home</a
+                  กลับหน้าแรก</a
                 >
               </li>
               <li class="items-center">
@@ -122,7 +122,7 @@
                   class="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
                   href="journal"
                   ><i class="fas fa-user-circle text-gray-500 mr-2 text-sm"></i>
-                  Journals</a
+                  วารสาร</a
                 >
               </li>
               <li class="items-center">
@@ -130,7 +130,7 @@
                   class="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
                   href="{% url 'publisher-article-list' %}"
                   ><i class="fas fa-user-circle text-gray-500 mr-2 text-sm"></i>
-                  Articles list</a
+                  รายการวารสารที่พิจารณา</a
                 >
               </li>
               <li class="items-center">
@@ -138,7 +138,7 @@
                   class="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
                   href="{% url 'logout' %}"
                   ><i class="fas fa-fingerprint text-gray-500 mr-2 text-sm"></i>
-                  Logout</a
+                  ออกจากระบบ</a
                 >
               </li>
               <li class="items-center">
@@ -235,8 +235,8 @@
           >
             <a
               class="text-teal-700 text-2xl uppercase hidden lg:inline-block font-semibold"
-              href="./index.html"
-              >PUBLISHER Dashboard</a
+              href="#"
+              >Dashboard สำนักพิมพ์</a
             >
             <form
               class="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3"
@@ -271,7 +271,7 @@
                       <div class="flex flex-wrap">
                         <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
                           <h5 class="text-gray-500 uppercase font-bold text-xs">
-                            Total Authors
+                            จำนวนวารสารทั้งหมด
                           </h5>
                           <span class="font-semibold text-xl text-gray-800">
                             {{authors}}
@@ -300,7 +300,7 @@
                       <div class="flex flex-wrap">
                         <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
                           <h5 class="text-gray-500 uppercase font-bold text-xs">
-                            Total Editors
+                            จำนวนบรรณาธิการทั้งหมด
                           </h5>
                           <span class="font-semibold text-xl text-gray-800">
                             {{editors}}
@@ -329,7 +329,7 @@
                       <div class="flex flex-wrap">
                         <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
                           <h5 class="text-gray-500 uppercase font-bold text-xs">
-                            Articles Published
+                            บทความที่ได้รับการตีพิมพ์
                           </h5>
                           <span class="font-semibold text-xl text-gray-800">
                             {{articles_published}}
@@ -358,7 +358,7 @@
                       <div class="flex flex-wrap">
                         <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
                           <h5 class="text-gray-500 uppercase font-bold text-xs">
-                            Articles not Published 
+                            บทความที่ถูกปฏิเสธ
                           </h5>
                           <span class="font-semibold text-xl text-gray-800">
                             {{articles_accepted}}
