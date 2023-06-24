@@ -55,14 +55,14 @@
           />
         </svg>
         <span class="text-xl text-white font-bold uppercase tracking-wide"
-          >Online Journal Publishing Website</span
+          >SSJMUK Online Journal Publishing Management System</span
         >
       </a>
       <button
         class="text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler"
         data-target="#navigation"
       >
-        <i class="material-icons">menu</i>
+        <i class="material-icons">Dashboard</i>
       </button>
       <div
         class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto"
@@ -75,21 +75,21 @@
             href="{% url 'home' %}"
             class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
           >
-            <span>Home</span>
+            <span>กลับหน้าแรก</span>
           </a>
           {% if user.is_authenticated %}
           <a
             href="{% url 'logout' %}"
             class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
           >
-            <span>Logout</span>
+            <span>ออกจากระบบ</span>
           </a>
             {% else %}
           <a
             href="{% url 'login' %}"
             class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
           >
-            <span>LogIn</span>
+            <span>เข้าสู่ระบบ</span>
           </a>
           {% endif %}
 {#          <a#}
@@ -118,22 +118,22 @@
 <div class="container mx-auto my-10 bg-white p-5 shadow-xl rounded-lg overflow-hidden ">
     <div class="text-center">
         <h3 class="mb-2 text-base text-teal-700 text-3xl hover:text-gray-700">{{ article.title }}</h3>
-        <p class="text-left text-teal-700 text-xl"><strong>Abstract</strong></p>
+        <p class="text-left text-teal-700 text-xl"><strong>บทคัดย่อ</strong></p>
         <p class="text-grey-600 text text-left">{{ article.abstract }}</p>
     </div>
 ​   <div class="mt-4 text-teal-500">
-        <strong>Journal - </strong>{{ article.journal }}
+        <strong>ชื่อวารสาร - </strong>{{ article.journal }}
     </div>
     <div class="mt-4">
         {% if keywords.all %}
-            <p class="inline p-2 text-teal-500"><strong>Keywords</strong> - </p>
+            <p class="inline p-2 text-teal-500"><strong>คำสำคัญ</strong> - </p>
         {% endif %}
         {% for key in keywords.all %}
             <a class="inline bg-teal-500 py-1 px-4 mx-1  rounded-full  text-white" href="#">{{ key }}</a>
         {% endfor %}
     </div>
     <div class="mt-4 text-teal-500">
-        <strong>Author - </strong>{{ article.author.name }}
+        <strong> - </strong>{{ article.author.name }}
         <p>Email - {{ article.author.email }}</p>
     </div>
     <div class="mt-4 text-teal-500">
@@ -146,7 +146,7 @@
 <main class="flex-1 md:p-0 lg:pt-8 lg:px-8 md:ml-24 flex flex-col">
   <section class="bg-white p-4 shadow">
   <div class="md:flex">
-    <h2 class="md:w-1/3 uppercase tracking-wide text-sm sm:text-lg mb-6">Review Article</h2>
+    <h2 class="md:w-1/3 uppercase tracking-wide text-sm sm:text-lg mb-6">รีวิว</h2>
   </div>
   <form method="post">
   {% csrf_token %}
