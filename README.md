@@ -1,1 +1,1 @@
-"# django_journal" 
+"# django_journal" Project PBRU
